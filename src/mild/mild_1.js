@@ -25,7 +25,7 @@ return a+" + "+ b+" = "+(a+b);
  */
 export function getIncreasingArray(startNumber, endNumber) {
     const array = []
-    for (i=0; i<endNumber-startNumber+1; i++){
+    for (let i=0; i<endNumber-startNumber+1; i++){
     array[i]=startNumber+i;
     }
     return array;
