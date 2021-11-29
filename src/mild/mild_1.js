@@ -63,7 +63,7 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    /* an array to keep track of the numbers occured"*/
+    /* an array to keep track of the elements occured"*/
     let array1 = [];
     /* an array to keep counting the times of occurance"*/
     let array2 = [];
@@ -77,7 +77,7 @@ export function countArray(array) {
             }
         }
         if (hasoccured==false){
-            array1[array1.length]=numbers[i];
+            array1[array1.length]=array[i];
             array2[array2.length]=1;
         }
     }
