@@ -39,7 +39,7 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-   let min=0;
+   let min=9999999999999999999999;
    let max=0;
    for (let i=0; i<numbers.length; i++){
     if(numbers[i]>max){
@@ -68,7 +68,7 @@ export function countArray(array) {
     /* an array to keep counting the times of occurance"*/
     let array2 = [];
 
-    for (let i=0; i<numbers.length; i++){
+    for (let i=0; i<array.length; i++){
         let hasoccured = false;
         for (let j=0; j<array1.length; j++){
             if(numbers[i]==array1[j]){
