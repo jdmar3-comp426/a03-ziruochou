@@ -82,7 +82,7 @@ export function countArray(array) {
         }
     }
 
-    const answer;
+    let answer={};
     
     for(let i=0; i<array1.length; i++){
         answer[array1[i]]=array[2];
