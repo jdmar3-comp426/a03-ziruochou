@@ -57,13 +57,15 @@ return result;
  */
 export function getStatistics(array) {
     let result = {};
+    let mean=array.getSum/array.length;
+
     result["length"]=array.length;
     result["sum"]=array.getSum;
     result["medium"]=array.getMedian;
     result["min"]=Math.min(array);
     result["max"]=Math.max(array);
-    result["variance"]=variance(array,array.getSum/array.length);
-    result["standard_deviation"]=Math.standard_deviation(array);
+    result["variance"]=variance(array,mean);
+    result["standard_deviation"]=math.standard_deviation(array);
     return result;
 }
 
