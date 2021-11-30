@@ -70,7 +70,7 @@ export function countArray(array) {
     for (let i=0; i<array.length; i++){
         let hasoccured = false;
         for (let j=0; j<array1.length; j++){
-            if(numbers[i]==array1[j]){
+            if(array[i]==array1[j]){
             array2[j]++;
             hasoccured = true;
             break;
