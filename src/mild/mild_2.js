@@ -6,7 +6,7 @@
  * returns: { type: 'number', value: 4 }
  */
 export function identifyVariable(variable) {
-
+   return "{ type: "+ variable.type+", value: "+variable+" }";
 }
 
 
@@ -24,7 +24,11 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   var result=[];
+   for (let i=0; i<array.length, i++) {
+      result[i]="{ type: "+ array[i].type+", value: "+array[i]+" }";
+   }
+   return result;
 }
 
 /**
