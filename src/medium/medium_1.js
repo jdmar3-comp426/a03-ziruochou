@@ -64,7 +64,7 @@ export function getStatistics(array) {
     result["medium"]=getMedian(array)
     let min=9999999999999999999999;
     let max=0;
-   for (let i=0; i<numbers.length; i++){
+   for (let i=0; i<array.length; i++){
     if(array[i]>max){
         max=array[i];
     }
