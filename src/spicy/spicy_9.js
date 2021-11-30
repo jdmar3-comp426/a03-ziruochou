@@ -155,7 +155,7 @@ return result;
 export const filter = (arr, test) => {
     let pass = [];
     let fail = [];
-    for(let i=1; i<arr.length; i++){
+    for(let i=0; i<arr.length; i++){
         if (!test(arr[i])){
             fail[fail.length]=arr[i];
         }else{
