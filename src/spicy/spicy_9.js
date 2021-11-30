@@ -18,9 +18,9 @@ export const repeat = (fn, n, ...params) => {
     let result = [];
         for (let j=0; j<n; j++){
             let a = fn(params);
-            result[result.length]=a[0];
+            result[result.length]=a;
     }
-    return result;
+    return result.toString;
 };
 
 
