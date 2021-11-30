@@ -153,8 +153,13 @@ return result;
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-    let pass = [];
-    let fail = [];
+    let result = {
+        pass:null;
+        fail:null
+    };
+    let pass=[];
+    let fail=[];
+    
     for(let i=0; i<arr.length; i++){
         if (!test(arr[i])){
             fail[fail.length]=arr[i];
@@ -162,9 +167,10 @@ export const filter = (arr, test) => {
             pass[pass.length]=arr[i];
         }
     }
-    return "{ pass: "+pass+", fail: "+ fail+" }";
+    result.pass=pass;
+    result.fail=fail;
+    return result;
 };
-
 
 /**
  * Write and export a function named "allEvensAreOdd" which takes as input an
