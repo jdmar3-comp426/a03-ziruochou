@@ -158,7 +158,6 @@ export const filter = (arr, test) => {
     for(let i=1; i<arr.length; i++){
         if (!test(arr[i])){
             fail[fail.length]=arr[i];
-            result=false;
         }else{
             pass[pass.length]=arr[i];
         }
