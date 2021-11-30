@@ -83,7 +83,7 @@ export function searchName(car_data, searchTerm) {
 export function searchByYear(car_data, years) {
     let result = [];
     for (let i=0; i<car_data.length; i++){
-        for (letj=0; j<car_data.length; j++){
+        for (let j=0; j<car_data.length; j++){
         if (car_data[i].year==years[j]){
             result[result.length]=car_data[i];
         }
