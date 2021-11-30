@@ -65,7 +65,7 @@ export function getStatistics(array) {
     result["min"]=Math.min(array);
     result["max"]=Math.max(array);
     result["variance"]=variance(array,mean);
-    result["standard_deviation"]=math.standard_deviation(array);
+    result["standard_deviation"]=Math.standard_deviation(array);
     return result;
 }
 
