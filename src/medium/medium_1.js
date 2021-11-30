@@ -62,7 +62,7 @@ export function getStatistics(array) {
     result["length"]=array.length;
     result["sum"]=getSum(array);
     result["mean"]=mean;
-    result["medium"]=getMedian(array)
+    result["median"]=getMedian(array)
     let min=9999999999999999999999;
     let max=0;
    for (let i=0; i<array.length; i++){
