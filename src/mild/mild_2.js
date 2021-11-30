@@ -27,8 +27,8 @@ export function identifyArray(array) {
    var result=[];
    for (let j=0; j<array.length; j++){
       let object = {};
-      object[type]=typeof array[j];
-      object[value]=array[j]
+      object["type"]=typeof array[j];
+      object["value"]=array[j]
       result[j]=object;
    }
    return result;
