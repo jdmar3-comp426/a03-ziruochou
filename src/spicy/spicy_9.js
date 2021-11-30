@@ -28,12 +28,9 @@ export const repeat = (fn, n, ...params) => {
  * Use the repeat function to log the string "Hello, world!" to the console
  *   10 times.
  */
-export function print (...params){
-    return params;
-}
 
 export const repeatDemo = () => {
-    repeat (print, 10, ..."Hello, world!");
+
 };
 
 
@@ -94,7 +91,13 @@ export const tenTimesFifty = () => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-
+    let result = true;
+for(let i=0; i<arr.length; i=i+2){
+    if (!test(arr[i])){
+        result=false;
+    }
+}
+return result;
 };
 
 
