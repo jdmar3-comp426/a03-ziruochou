@@ -56,6 +56,14 @@ return result;
  }
  */
 export function getStatistics(array) {
-
+    let result = {};
+    result["length"]=array.length;
+    result["sum"]=array.getSum;
+    result["medium"]=array.getMedian;
+    result["min"]=Math.min(array);
+    result["max"]=Math.max(array);
+    result["variance"]=Math.variance(array);
+    result["standard_deviation"]=Math.standard_deviation(array);
+    return result;
 }
 
