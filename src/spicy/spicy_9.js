@@ -153,10 +153,7 @@ return result;
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-    let result = {
-        pass:null;
-        fail:null
-    };
+    let result = {};
     let pass=[];
     let fail=[];
     
@@ -167,8 +164,8 @@ export const filter = (arr, test) => {
             pass[pass.length]=arr[i];
         }
     }
-    result.pass=pass;
-    result.fail=fail;
+    result["pass"]=pass;
+    result["fail"]=fail;
     return result;
 };
 
