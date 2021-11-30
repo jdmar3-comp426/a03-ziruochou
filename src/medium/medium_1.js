@@ -62,7 +62,7 @@ export function getStatistics(array) {
     result["medium"]=array.getMedian;
     result["min"]=Math.min(array);
     result["max"]=Math.max(array);
-    result["variance"]=variance(array,Math.mean(array));
+    result["variance"]=variance(array,array.getSum/array.length);
     result["standard_deviation"]=Math.standard_deviation(array);
     return result;
 }
