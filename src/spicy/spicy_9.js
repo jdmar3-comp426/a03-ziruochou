@@ -121,7 +121,13 @@ return result;
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    let result = false;
+for(let i=0; i<arr.length; i=i+2){
+    if (test(arr[i])){
+        result=true;
+    }
+}
+return result;
 };
 
 
