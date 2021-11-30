@@ -85,7 +85,7 @@ export function countArray(array) {
     let answer={};
     
     for(let i=0; i<array1.length; i++){
-        answer[array1[i]]=array[2];
+        answer[array1[i]]=array2[i];
     }
 
     return answer;
