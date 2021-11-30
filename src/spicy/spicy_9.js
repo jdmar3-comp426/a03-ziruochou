@@ -18,7 +18,7 @@ export const repeat = (fn, n, ...params) => {
     let result = [];
         for (let j=0; j<n; j++){
             let a = fn(params);
-            result[result.length]=a;
+            result[result.length]=a[0];
     }
     return result;
 };
@@ -29,6 +29,7 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
+    repeat ("Hello, world!")
 
 };
 
