@@ -57,13 +57,23 @@ return result;
  */
 export function getStatistics(array) {
     let result = {};
-    let mean=array.getSum/array.length;
+    let mean=getSum(array)/array.length;
 
     result["length"]=array.length;
-    result["sum"]=array.getSum;
-    result["medium"]=array.getMedian;
-    result["min"]=Math.min(array);
-    result["max"]=Math.max(array);
+    result["sum"]=getSum(array);
+    result["medium"]=getMedian(array)
+    let min=9999999999999999999999;
+    let max=0;
+   for (let i=0; i<numbers.length; i++){
+    if(array[i]>max){
+        max=array[i];
+    }
+    if (array[i]<min){
+        min=array[i];
+    }
+    }
+    result["min"]=min;
+    result["max"]=max;
     result["variance"]=variance(array,mean);
     result["standard_deviation"]=Math.sqrt(array.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / array.length);
     return result;
