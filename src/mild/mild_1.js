@@ -63,9 +63,8 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    /* an array to keep track of the elements occured"*/
+
     let array1 = [];
-    /* an array to keep counting the times of occurance"*/
     let array2 = [];
 
     for (let i=0; i<array.length; i++){
@@ -73,7 +72,8 @@ export function countArray(array) {
         for (let j=0; j<array1.length; j++){
             if(numbers[i]==array1[j]){
             array2[j]++;
-            hasoccured = true
+            hasoccured = true;
+            break;
             }
         }
         if (hasoccured==false){
@@ -89,5 +89,4 @@ export function countArray(array) {
     }
 
     return answer;
-    
 }
