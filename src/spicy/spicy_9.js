@@ -28,8 +28,12 @@ export const repeat = (fn, n, ...params) => {
  * Use the repeat function to log the string "Hello, world!" to the console
  *   10 times.
  */
+export function print (...params){
+    return params;
+}
+
 export const repeatDemo = () => {
-    repeat (repeat, 10, ...["Hello, world!"]);
+    repeat (print, 10, ..."Hello, world!");
 };
 
 
