@@ -10,7 +10,7 @@ see under the methods section
 
 /**
  * This object contains data that has to do with every car in the `mpg_data` object.
- *
+ * Numbers.reduce(function(acc, curr) { return acc += cure;}, 0)
  *
  * @param {allCarStats.avgMpg} Average miles per gallon on the highway and in the city. keys `city` and `highway`
  *
@@ -20,7 +20,7 @@ see under the methods section
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
 export const allCarStats = {
-    avgMpg: undefined,
+    avgMpg: mpg_data.reduce(function(acc, curr) {return acc += cure;},0),
     allYearStats: undefined,
     ratioHybrids: undefined,
 };

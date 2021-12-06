@@ -9,7 +9,7 @@
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
 export function sumToString(a, b) {
-
+return a+" + "+ b+" = "+(a+b);
 }
 
 
@@ -24,7 +24,11 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+    const array = []
+    for (let i=0; i<endNumber-startNumber+1; i++){
+    array[i]=startNumber+i;
+    }
+    return array;
 }
 
 /**
@@ -35,7 +39,17 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-
+   let min=9999999999999999999999;
+   let max=0;
+   for (let i=0; i<numbers.length; i++){
+    if(numbers[i]>max){
+        max=numbers[i];
+    }
+    if (numbers[i]<min){
+        min=numbers[i];
+    }
+    }
+    return "{ max: "+ max +", min: "+min+" }";
 }
 
 /**
@@ -50,4 +64,29 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
 
+    let array1 = [];
+    let array2 = [];
+
+    for (let i=0; i<array.length; i++){
+        let hasoccured = false;
+        for (let j=0; j<array1.length; j++){
+            if(array[i]==array1[j]){
+            array2[j]++;
+            hasoccured = true;
+            break;
+            }
+        }
+        if (hasoccured==false){
+            array1[array1.length]=array[i];
+            array2[array2.length]=1;
+        }
+    }
+
+    let answer={};
+    
+    for(let i=0; i<array1.length; i++){
+        answer[array1[i]]=array2[i];
+    }
+
+    return answer;
 }
